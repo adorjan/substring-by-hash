@@ -47,10 +47,11 @@ public class MyStringTest {
     public void testShouldReturnPositionOfFirstMatchWhenSubstringFound() {
         // GIVEN
         MyString str = new MyString("Find me some substring please!");
-        MyString nonMatchingSubstring = new MyString("substring");
+        System.out.println("....................." + str.hash());
+        MyString matchingSubstring = new MyString("substring");
 
         // WHEN
-        int substringPosition = str.substring(nonMatchingSubstring);
+        int substringPosition = str.substring(matchingSubstring);
 
         // THEN
         assertThat(substringPosition, is(13));
